@@ -3,26 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="page-header">
     	<nav class="main-navigation">
-    		<a href="#" class="main-header-logo">
+    		<a href="#" class="logo">
 	    		<img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
 	    	</a>
-    		<ul class="site-navigation">
-    			<li><a href="#">Информация</a></li>
-    			<li><a href="#">Новости</a></li>
-    			<li><a href="#">Прайс-лист</a></li>
-    			<li><a href="#">Магазин</a></li>
-    			<li><a href="#">Контакты</a></li>
-    		</ul>
-    		<ul class="user-navigation">
-	    		<li><a href="#">Вход</a></li>
-	    	</ul>
+        <div class="navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li>
+                <a class="login-link" href="login.html">Вход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
     	</nav>
     </header>
-
     <main class="container">
 
 			<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
@@ -33,36 +41,36 @@
     		<ul class="features-list">
     			<li class="features-item">
     				<h3>Быстро</h3>
-    				<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+    				<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО, И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
     			</li>
     			<li class="features-item">
     				<h3>КРУТО</h3>
     				<p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
 						МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!
-						ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+						ВО ВСЯКОМ СЛУЧАЕ, ВНЕШНЕ.
 						</p>
     			</li>
     			<li class="features-item">
     				<h3>ДОРОГО</h3>
-    				<p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+    				<p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕННЫЙ СТАТУС?</p>
     			</li>
     		</ul>
     	</section>
 
-			<div>
+			<div class="index-row">
 				<section class="news">
 	    		<h2>Новости</h2>
 
 	    		<ul class="news-list">
 	    			<li class="news-item">
 	    				<p>
-	    					Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
+	    					НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
 	    				</p>
 	    				<time datetime="2016-01-11">11 января</time>
 	    			</li>
 	    			<li class="news-item">
 	    				<p>
-	    					В нашей команде пополнение, Борис "Бритва" Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды
+	    					В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
 	    				</p>
 	    				<time datetime="2016-01-18">18 января</time>
 	    			</li>
@@ -74,15 +82,15 @@
 	    		<h2>Фотогалерея</h2>
 	    		<figure class="gallery-content">
 	    			<a href="#">
-	    				<img src="img/gallery-photo.jpg" width="286" height="164" alt="Фото из галереи">
+	    				<img src="img/gallery-photo.jpg" width="286" height="164" alt="Фото зала парикмахерской">
 	    			</a>
-	    			<span class="button gallery-button gallery-button-back">Назад</span>
-	    			<span class="button gallery-button gallery-button-next">Вперед</span>
 	    		</figure>
+          <button class="button gallery-button gallery-button-back">Назад</button>
+          <button class="button gallery-button gallery-button-next">Вперед</button>
 	    	</section>
 			</div>
 
-			<div>
+			<div class="index-row">
 				<section class="contacts">
 					<h2>Контактная информация</h2>
 					<p>
@@ -91,27 +99,40 @@
 						ТЕЛЕФОН: +7 (495) 666-02-66
 					</p>
 					<p>
-						ВРЕМЯ РАБОТЫ:<br> 
+						ВРЕМЯ РАБОТЫ:<br>
 						ПН—ПТ: С 10:00 ДО 22:00<br>
 						СБ—ВС: С 10:00 ДО 19:00
 					</p>
-					<a href="#" class="button">Как проехать</a>
-					<a href="#" class="button">Обратная связь</a>
+					<a class="button" href="#">Как проехать</a>
+					<a class="button" href="#">Обратная связь</a>
 				</section>
-				
+
 				<section class="appointment">
 					<h2>Записаться</h2>
 					<p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-					<form>
-						
+					<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="appointment-item">
+              <label for="appointment-date">ДАТА</label>
+              <input id="appointment-date" type="text" name="appointment-date" placeholder="08.10.2017">
+            </p>
+            <p class="appointment-item">
+              <label for="appointment-time">ВРЕМЯ</label>
+              <input id="appointment-time" type="text" name="appointment-time" placeholder="10:00">
+            </p>
+            <p class="appointment-item">
+              <label for="client-name">ВАШЕ ИМЯ</label>
+              <input id="client-name" type="text" name="client-name" placeholder="Борода">
+            </p>
+            <p class="appointment-item">
+              <label for="client-phone-number">ВАШ ТЕЛЕФОН</label>
+              <input id="client-phone-number" type="tel" name="client-phone-number" placeholder="+7 123 456-78-90">
+            </p>
+            <button class="button" type="submit">ОТПРАВИТЬ</button>
 					</form>
-				</section>  
+				</section>
 			</div>
-    	
-
-			 	
     </main>
-		<footer class="main-footer">
+		<footer class="page-footer">
 			<p class="footer-contacts">
 				БАРБЕРШОП «БОРОДИНСКИЙ»<br>
 				АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
@@ -119,20 +140,21 @@
 				ТЕЛЕФОН: +7 (495) 666-02-66
 			</p>
 
-			<div>
+			<div class="footer-social">
 				<b>ДАВАЙТЕ ДРУЖИТЬ!</b>
-				<ul>
+				<ul class="social-list">
 					<li>
-						<a class="social-button" href="http://vk.com">Вконтакте</a>
+						<a class="social-button" href="http://vk.com"><span class="visually-hidden">Вконтакте<span></a>
 					</li>
 					<li>
-						<a class="social-button" href="http://facebook.com">Фейсбук</a>
+						<a class="social-button" href="http://facebook.com"><span class="visually-hidden">Фейсбук<span></a>
 					</li>
 					<li>
-						<a class="social-button" href="http://instagramm.com">Инстаграмм</a>
+						<a class="social-button" href="http://instagramm.com"><span class="visually-hidden">Инстаграмм<span></a>
 					</li>
 				</ul>
 			</div>
+
 			<p class="footer-copyright">
 				<b>Разработано:</b>
 				<a class="button" href="https://htmlacademy.ru">HTML ACADEMY</a>
@@ -140,15 +162,36 @@
 		</footer>
 
 		<section class="modal modal-login">
-			<h2>Личный кабинет</h2>
-			<p>Введите пожалуйста свой логин и пароль</p>
-			<!-- Форма -->
-			<span class="modal-close">x</span>
+			<h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+			<p>ВВЕДИТЕ, ПОЖАЛУЙСТА, СВОЙ ЛОГИН И ПАРОЛЬ</p>
+			<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input id="user-login" type="text" name="user-login" placeholder="ЛОГИН">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input id="user-password" type="text" name="user-password" placeholder="ПАРОЛЬ">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox" for="login-password-info">
+            <input id="login-password-info" class="visually-hidden" type="checkbox" name="memorize" checked>
+            <span class="checkbox-indicator"></span>
+            ЗАПОМНИТЕ МЕНЯ
+          </label>
+          <a class="password-restore" href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+        </p>
+        <button class="button" type="submit">ВОЙТИ</button>
+      </form>
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 
 		<section class="modal modal-map">
 			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<span class="modal-close">x</span>
+      <p>
+        <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
   </body>
 </html>

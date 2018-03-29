@@ -4,25 +4,30 @@
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
   </head>
-  <body>
-    <header class="main-header">
-      <a href="#" class="main-header-logo">
-        <img src="img/mini-logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
-      </a>
+  <body class="inner-page">
+      <header class="page-header">
       <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li><a href="#">Вход</a></li>
-        </ul>
+        <a href="#" class="logo">
+          <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
+        </a>
+        <div class="navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li>
+                <a class="login-link" href="login.html">Вход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-
     <main class="container">
       <h1>Средства для ухода</h1>
       <ul class="breadcrumbs">
@@ -33,7 +38,7 @@
 
       <section class="shop-content">
         <h2 class="visually-hidden">Товары</h2>
-        
+
         <aside class="sort-conditions">
           <section class="makers">
             <h3>ПРОИЗВОДИТЕЛИ</h3>
@@ -125,11 +130,30 @@
         <a class="button" href="https://htmlacademy.ru">HTML ACADEMY</a>
       </p>
     </footer>
+
     <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите пожалуйста свой логин и пароль</p>
-      <!-- Форма -->
-      <span class="modal-close">x</span>
+      <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+      <p>ВВЕДИТЕ, ПОЖАЛУЙСТА, СВОЙ ЛОГИН И ПАРОЛЬ</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input id="user-login" type="text" name="user-login" placeholder="ЛОГИН">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input id="user-password" type="text" name="user-password" placeholder="ПАРОЛЬ">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox" for="login-password-info">
+            <input id="login-password-info" class="visually-hidden" type="checkbox" name="memorize" checked>
+            <span class="checkbox-indicator"></span>
+            ЗАПОМНИТЕ МЕНЯ
+          </label>
+          <a class="password-restore" href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+        </p>
+        <button class="button" type="submit">ВОЙТИ</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
