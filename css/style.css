@@ -1016,7 +1016,7 @@ li.breadcrumbs-current {
 
 .modal-login {
   position: fixed;
-  top: 120px;
+  top: -1200px;
   left: 50%;
 
   display: none;
@@ -1173,4 +1173,36 @@ li.breadcrumbs-current {
 
 .modal-map p {
   margin: 0;
+}
+
+@keyframes modal-down {
+  30% {
+    transform: translateY(120px);
+  }
+
+  60% {
+    transform: translateY(110px);
+  }
+
+  100% {
+    transform: translateY(120px);
+  }
+}
+
+@keyframes modal-up {
+  to {
+    transform: translateY(-1200px);
+  }
+}
+
+.show {
+  display: block;
+  animation-name: modal-down;
+  animation-duration: 0.3s;
+}
+
+.close {
+  animation-name: modal-up;
+  animation-duration: 0.3s;
+  display: none;
 }
